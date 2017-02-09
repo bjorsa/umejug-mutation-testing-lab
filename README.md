@@ -5,11 +5,15 @@
 #### Mutation testing
 ```> ./gradlew pitest```
 
-Reports can viewed using _build/reports/{timestamp}/index.html_
+Reports can viewed using _build/reports/index.html_
 #### Running the application
 ```> ./gradlew bootRun```
 
 ## Windows
+
+#### Mutation testing
 ```$ gradlew.bat pitest```
 
-```$ gradlew.bat clean pitest"
+Reports can viewed using _build\reports\index.html_
+#### Running the application
+```$ gradlew.bat bootRun```
