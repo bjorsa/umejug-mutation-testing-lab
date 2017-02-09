@@ -1,4 +1,4 @@
-package umejug.lab.mutationtest.domain;
+package umejug.lab.mutationtest;
 
 import umejug.lab.mutationtest.domain.util.Validate;
 

@@ -1,7 +1,7 @@
 package umejug.lab.mutationtest.domain.shopping.product;
 
 import org.junit.Test;
-import umejug.lab.mutationtest.domain.TestHelper;
+import umejug.lab.mutationtest.TestHelper;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;

@@ -4,6 +4,9 @@ import org.junit.Test;
 
 import javax.validation.constraints.Null;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class ValidateTest {
@@ -116,5 +119,15 @@ public class ValidateTest {
     @Test
     public void shouldThrowWhenEmptyStringIsNotNotEmpty() {
         assertThatThrownBy(() -> Validate.notEmpty("")).isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
+    public void shouldNotThrowWhenNonEmptyCollectionIsNotEmpty() {
+        Validate.notEmpty(Collections.singleton(1));
+    }
+
+    @Test
+    public void shouldThrowWhenEmptyCollectionIsNotNotEmpty() {
+        assertThatThrownBy(() -> Validate.notEmpty(Collections.emptySet())).isInstanceOf(IllegalArgumentException.class);
     }
 }

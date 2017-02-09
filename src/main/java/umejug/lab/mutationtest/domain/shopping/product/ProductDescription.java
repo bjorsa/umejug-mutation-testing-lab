@@ -4,7 +4,7 @@ import umejug.lab.mutationtest.domain.ValueObject;
 import umejug.lab.mutationtest.domain.util.Validate;
 
 public class ProductDescription extends ValueObject {
-    private static final int MAX_DESCRIPTION_LENGTH = 1000;
+    public static final int MAX_DESCRIPTION_LENGTH = 1000;
 
     private final String description;
 

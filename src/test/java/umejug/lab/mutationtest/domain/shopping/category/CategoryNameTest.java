@@ -1,9 +1,7 @@
 package umejug.lab.mutationtest.domain.shopping.category;
 
 import org.junit.Test;
-import umejug.lab.mutationtest.domain.TestHelper;
-
-import javax.validation.constraints.Null;
+import umejug.lab.mutationtest.TestHelper;
 
 import static org.assertj.core.api.Java6Assertions.assertThat;
 import static org.assertj.core.api.Java6Assertions.assertThatThrownBy;

@@ -4,7 +4,7 @@ import umejug.lab.mutationtest.domain.ValueObject;
 import umejug.lab.mutationtest.domain.util.Validate;
 
 public final class AttributeValue extends ValueObject {
-    private static final int MAX_VALUE_LENGTH = 200;
+    public static final int MAX_VALUE_LENGTH = 200;
 
     private final String value;
 

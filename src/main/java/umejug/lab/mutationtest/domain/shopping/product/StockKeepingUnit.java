@@ -4,17 +4,16 @@ import umejug.lab.mutationtest.domain.Entity;
 import umejug.lab.mutationtest.domain.Identifier;
 import umejug.lab.mutationtest.domain.util.Validate;
 
-import java.util.Collections;
-import java.util.List;
+import java.util.Set;
 
 public final class StockKeepingUnit extends Entity {
 
     private final Identifier product;
-    private final Attributes attributes;
+    private final Set<Attribute> attributes;
 
     private final int stockQuantity;
 
-    public StockKeepingUnit(Identifier identifier, Identifier product, Attributes attributes, int stockQuantity) {
+    public StockKeepingUnit(Identifier identifier, Identifier product, Set<Attribute> attributes, int stockQuantity) {
         super(identifier);
 
         Validate.notNull(product);
@@ -29,7 +28,7 @@ public final class StockKeepingUnit extends Entity {
         return product;
     }
 
-    public Attributes getAttributes() {
+    public Set<Attribute> getAttributes() {
         return attributes;
     }
 
