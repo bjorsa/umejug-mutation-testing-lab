@@ -14,4 +14,14 @@ public abstract class Entity {
     public final Identifier getIdentifier() {
         return identifier;
     }
+
+    @Override
+    public final boolean equals(Object o) {
+        return this == o || o != null && o instanceof Entity && identifier.equals(((Entity) o).identifier);
+    }
+
+    @Override
+    public final int hashCode() {
+        return identifier.hashCode();
+    }
 }

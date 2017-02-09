@@ -10,7 +10,7 @@ public final class ShoppingCartLineItem extends ValueObject {
     private final int quantity;
 
     public ShoppingCartLineItem(Identifier sku, int quantity) {
-        Validate.notNull(sku, () -> new NullPointerException("sku can't be null."));
+        Validate.notNull(sku);
         Validate.positive(quantity, () -> new IllegalArgumentException("quantity must be a positive integer."));
 
         this.sku = sku;

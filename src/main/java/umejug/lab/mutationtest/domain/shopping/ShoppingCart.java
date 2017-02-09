@@ -11,7 +11,7 @@ public final class ShoppingCart extends ValueObject {
     private final Set<ShoppingCartLineItem> lineItems;
 
     public ShoppingCart(Set<ShoppingCartLineItem> lineItems) {
-        Validate.notNull(lineItems, () -> new NullPointerException("lineItems can't be null."));
+        Validate.notNull(lineItems);
 
         this.lineItems = Collections.unmodifiableSet(lineItems);
     }
