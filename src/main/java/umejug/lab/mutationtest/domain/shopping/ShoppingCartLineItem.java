@@ -17,7 +17,7 @@ public final class ShoppingCartLineItem extends ValueObject {
         this.quantity = quantity;
     }
 
-    public Identifier getSku() {
+    public Identifier getSKU() {
         return sku;
     }
 

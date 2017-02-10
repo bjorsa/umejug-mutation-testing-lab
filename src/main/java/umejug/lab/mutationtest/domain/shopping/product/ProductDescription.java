@@ -3,7 +3,7 @@ package umejug.lab.mutationtest.domain.shopping.product;
 import umejug.lab.mutationtest.domain.ValueObject;
 import umejug.lab.mutationtest.domain.util.Validate;
 
-public class ProductDescription extends ValueObject {
+public final class ProductDescription extends ValueObject {
     public static final int MAX_DESCRIPTION_LENGTH = 1000;
 
     private final String description;

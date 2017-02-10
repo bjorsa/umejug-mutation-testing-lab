@@ -3,7 +3,7 @@ package umejug.lab.mutationtest.domain.shopping.category;
 import umejug.lab.mutationtest.domain.ValueObject;
 import umejug.lab.mutationtest.domain.util.Validate;
 
-public class CategoryName extends ValueObject {
+public final class CategoryName extends ValueObject {
 
     public static final int MAX_NAME_LENGTH = 100;
 

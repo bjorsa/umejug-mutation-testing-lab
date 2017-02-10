@@ -7,7 +7,7 @@ import umejug.lab.mutationtest.domain.util.Validate;
 import java.util.Collections;
 import java.util.Set;
 
-public class Category extends Entity {
+public final class Category extends Entity {
 
     private final CategoryName name;
     private final Set<Category> subCategories;

@@ -1,6 +1,8 @@
 package umejug.lab.mutationtest.domain.util;
 
+import java.math.BigDecimal;
 import java.util.Collection;
+import java.util.Map;
 import java.util.function.Supplier;
 
 public final class Validate {
@@ -33,6 +35,16 @@ public final class Validate {
 
     public static void notNegative(int n, Supplier<IllegalArgumentException> exceptionSupplier) {
         greaterThanOrEqual(n, 0, exceptionSupplier);
+    }
+
+    public static void notNegative(BigDecimal d) {
+        notNegative(d, IllegalArgumentException::new);
+    }
+
+    public static void notNegative(BigDecimal d, Supplier<IllegalArgumentException> exceptionSupplier) {
+        if (d.compareTo(BigDecimal.ZERO) < 0) {
+            throw exceptionSupplier.get();
+        }
     }
 
     public static void lessThan(int n, int lessThan) {
@@ -87,6 +99,16 @@ public final class Validate {
 
     public static void notEmpty(Collection<?> c, Supplier<IllegalArgumentException> exceptionSupplier) {
         if (c.isEmpty()) {
+            throw exceptionSupplier.get();
+        }
+    }
+
+    public static void notEmpty(Map<?, ?> m) {
+        notEmpty(m, IllegalArgumentException::new);
+    }
+
+    private static void notEmpty(Map<?, ?> m, Supplier<IllegalArgumentException> exceptionSupplier) {
+        if (m.isEmpty()) {
             throw exceptionSupplier.get();
         }
     }
