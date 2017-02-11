@@ -1,16 +1,11 @@
 package umejug.lab.mutationtest.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sun.tools.doclint.HtmlTag;
-import jdk.nashorn.internal.parser.JSONParser;
-import jdk.nashorn.internal.runtime.JSONFunctions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.jackson.JsonObjectDeserializer;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import umejug.lab.mutationtest.domain.shopping.product.Attribute;
 import umejug.lab.mutationtest.representation.product.AttributeRepresentation;
 import umejug.lab.mutationtest.representation.product.ProductRepresentation;
 import umejug.lab.mutationtest.service.ProductService;
