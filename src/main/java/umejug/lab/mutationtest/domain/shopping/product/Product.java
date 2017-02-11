@@ -12,9 +12,9 @@ public final class Product extends Entity {
 
     private final ProductName name;
     private final ProductDescription description;
-    private final Set<Category> categories;
+    private final Set<Identifier> categories;
 
-    public Product(Identifier identifier, ProductName name, ProductDescription description, Set<Category> categories) {
+    public Product(Identifier identifier, ProductName name, ProductDescription description, Set<Identifier> categories) {
         super(identifier);
 
         Validate.notNull(name);
@@ -31,7 +31,7 @@ public final class Product extends Entity {
         return name;
     }
 
-    public Set<Category> getCategories() {
+    public Set<Identifier> getCategories() {
         return categories;
     }
 

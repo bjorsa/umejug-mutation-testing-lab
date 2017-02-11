@@ -17,7 +17,7 @@ public class ProductTest {
     public void shouldConstructAProductAndRetainGivenValues() {
         ProductName productName = new ProductName("a");
         ProductDescription productDescription = new ProductDescription("b");
-        Set<Category> categories = Collections.singleton(new Category(new Identifier(), new CategoryName("c"), Collections.emptySet()));
+        Set<Identifier> categories = Collections.singleton(new Identifier());
         Product product = new Product(new Identifier(), productName, productDescription, categories);
         assertThat(product.getName()).isEqualTo(productName);
         assertThat(product.getDescription()).isEqualTo(productDescription);
@@ -27,14 +27,14 @@ public class ProductTest {
     @Test
     public void shouldThrowWhenCreatedWithANullName() {
         ProductDescription productDescription = new ProductDescription("b");
-        Set<Category> categories = Collections.singleton(new Category(new Identifier(), new CategoryName("c"), Collections.emptySet()));
+        Set<Identifier> categories = Collections.singleton(new Identifier());
         assertThatThrownBy(() -> new Product(new Identifier(), null, productDescription, categories)).isInstanceOf(NullPointerException.class);
     }
 
     @Test
     public void shouldThrowWhenCreatedWithANullDescription() {
         ProductName productName = new ProductName("a");
-        Set<Category> categories = Collections.singleton(new Category(new Identifier(), new CategoryName("c"), Collections.emptySet()));
+        Set<Identifier> categories = Collections.singleton(new Identifier());
         assertThatThrownBy(() -> new Product(new Identifier(), productName, null, categories)).isInstanceOf(NullPointerException.class);
     }
 
@@ -49,7 +49,7 @@ public class ProductTest {
     public void shouldThrowWhenCreatedWithAnEmptyCategoriesSet() {
         ProductName productName = new ProductName("a");
         ProductDescription productDescription = new ProductDescription("b");
-        Set<Category> categories = Collections.emptySet();
+        Set<Identifier> categories = Collections.emptySet();
         assertThatThrownBy(() -> new Product(new Identifier(), productName, productDescription, categories)).isInstanceOf(IllegalArgumentException.class);
     }
 }
